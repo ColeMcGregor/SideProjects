@@ -39,7 +39,7 @@ def draw_star(screen: pygame.Surface,                                   #The scr
         points.append((x, y))
     #draw the star
     pygame.draw.polygon(screen, (255, 255, 255), points)
-
+#main function for the program
 def main():
     parser = argparse.ArgumentParser(description="Draw a star using Pygame.")
     parser.add_argument(
@@ -70,6 +70,7 @@ def main():
     pygame.display.set_caption("Star Drawer")
     screen.fill((0, 0, 0))  # Black background
 
+    #draw the star
     draw_star(
         screen=screen,
         starting_degree=args.starting_degree,
@@ -77,7 +78,6 @@ def main():
         size=args.size
     )
 
-    pygame.display.flip()
     print("Star drawn. Close the window to exit.")
 
     # Keep window open until user closes it
